@@ -1,0 +1,36 @@
+.section {
+	width: 100%;
+
+	&--dark {
+		background: $dark;
+		color: $white;
+	}
+
+	&--darker {
+		background: $darker;
+		color: $white;
+	}
+
+	&--border-primary {
+		border-bottom: 3px solid $primary-color;
+	}
+
+	&--border-gray {
+		border-bottom: 2px solid #ddd;
+	}
+
+	&--p30 {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&--p20 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	&--p15 {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}

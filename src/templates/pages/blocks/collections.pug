@@ -1,0 +1,19 @@
+mixin collection-item(numImage, title)
+	.collections__item
+		img.collections__image(
+			src=`public/img/product0${numImage}.png`
+			alt="image"
+			width="300"
+			height="300"
+		)
+		.collections__label
+			h1.collections__title=title
+			a.collections__link(href="#") Shop now 
+				i.fas.fa-arrow-circle-right.collections__icon
+
+section.section.section--p30
+	.collections.container
+
+		+collection-item("3", "Laptop Collection")
+		+collection-item("2", "Accessories Collection")
+		+collection-item("9", "Cameras Collection")

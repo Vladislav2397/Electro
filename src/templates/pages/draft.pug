@@ -1,0 +1,44 @@
+extends ../index-layout
+
+block content
+	h1 Draft
+	section.section.section--p15.section--dark
+		button.btn.btn--rounded
+			span Button
+		br
+		button.btn.btn--rounded.btn--light-theme
+			span Button
+		br
+		button.btn.btn--rounded.btn--dark-theme
+			span Button
+		br
+		.draft
+			button.btn.btn--rounded.btn--dark-theme.draft__btn
+				i.fas.fa-shopping-cart.draft__icon
+				span.draft__text Button
+
+	br
+
+	section.section.section--p30.section--dark
+		a.link(href="#") Default link
+		a.link.link--active(href="#") Active link
+		a.link.link--active.link--underline(href="#")
+			| Active underline link
+		a.link.link--underline(href="#") Underline link
+		a.link.link--grey-theme(href="#") Grey theme link
+		a.link.link--grey-theme.link--underline(href="#")
+			| Grey theme underline link
+
+	br
+
+	section.section.section--p30
+		.draft
+			.action.action--circle
+				i.far.fa-star.action__icon
+			.action
+				i.far.fa-star.action__icon
+				span.action__text Wishlist
+			.action
+				i.far.fa-star.action__icon
+					span.action__notification 3
+				span.action__text Wishlist

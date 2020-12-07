@@ -1,0 +1,21 @@
+.header {
+	height: 100px;
+
+	@include flex($main-axis: space-between);
+
+	&__form {
+		width: 575px;
+		height: 40px;
+		overflow: hidden;
+	}
+
+	&__actions {
+		font-size: 12px;
+
+		@include flex($main-axis: space-evenly);
+	}
+
+	&__icon {
+		font-size: 24px;
+	}
+}

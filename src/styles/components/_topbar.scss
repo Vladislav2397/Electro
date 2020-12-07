@@ -1,0 +1,19 @@
+.topbar {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	&__section {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	&__icon {
+		margin-right: 10px;
+		color: $primary-color;
+	}
+}

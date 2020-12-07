@@ -1,0 +1,10 @@
+.nav {
+	height: 60px;
+	font-size: 14px;
+
+	@include flex($main-axis: flex-start);
+
+	&__link {
+		margin: 0 15px;
+	}
+}

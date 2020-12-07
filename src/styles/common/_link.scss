@@ -1,0 +1,54 @@
+.link {
+	margin: 0 1em;
+	font-weight: 500;
+	text-decoration: none;
+	transition: 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		color: $primary-color;
+	}
+
+	&--underline {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background: $primary-color;
+			transition: 0.3s;
+
+			@include position($top: 100%, $left: 0);
+			@include box(0, 2px);
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}
+
+	&--dark-theme {
+		color: #2B2D42;
+	}
+
+	&--grey-theme {
+		color: $gray;
+		font-weight: bold;
+
+		&:hover {
+			color: $gray;
+		}
+	}
+
+	&--active {
+		color: $primary-color;
+
+		&:hover {
+			color: $primary-color;
+		}
+
+		&::after {
+			width: 100%;
+		}
+	}
+}

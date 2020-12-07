@@ -1,0 +1,66 @@
+mixin product-item(numImage)
+	.product-item
+		.product-item__pane
+			img.product-item__image(src=`public/img/product0${numImage}.png`, alt="image" width="400" height="400")
+		.product-item__tags
+			.product-item__tag.product-item__tag--fill New
+			.product-item__tag -30%
+		.product-item__category Category
+		a.product-item__title(href="#") Title product
+		.product-item__price
+			.product-item__current-price $850.00
+			.product-item__old-price $900.99
+		.product-item__raiting
+			i.fas.fa-star.product-item__star
+			i.fas.fa-star.product-item__star
+			i.fas.fa-star.product-item__star
+			i.far.fa-star.product-item__star
+			i.far.fa-star.product-item__star
+		.product-item__actions
+			.action.action--circle
+				i.far.fa-heart.action__icon
+				span.action__description
+			.action.action--circle
+				i.fas.fa-map-signs.action__icon
+				span.action__description
+			.action.action--circle
+				i.far.fa-eye.action__icon
+				span.action__description
+		.product-item__hidden-pane
+			.product-item__btn.btn.btn--rounded.btn--dark-theme
+				i.fas.fa-shopping-cart.product-item__btn-icon
+				snap.product-item__text Add to cart
+
+mixin product-item-column
+	.product-item.product-item--column
+		.product-item__pane.product-item__pane--column
+			img.product-item__image(src="public/img/product05.png", alt="image")
+		.product-item__information
+			.product-item__category Category
+			a.product-item__title(href="#") Title product
+			.product-item__price
+				.product-item__current-price $800.00
+				.product-item__old-price $900.99
+
+mixin slider
+	.slider
+		.slider__header
+			span.slider__title
+			.slider__links
+		.slider__body
+			.slider__carousel.carousel
+				+product-item-column
+				+product-item-column
+				+product-item-column
+				+product-item-column
+
+mixin slider-column
+	.slider
+		.slider__header
+			span.slider__title
+		.slider__body
+			.slider__carousel.carousel.carouser--column
+				+product-item-column
+				+product-item-column
+				+product-item-column
+				+product-item-column

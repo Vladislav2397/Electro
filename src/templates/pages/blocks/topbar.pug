@@ -1,0 +1,14 @@
+mixin topbar-item(iconClass, text)
+	a.topbar__link.link(href="#")
+		i.topbar__icon(class=iconClass)
+		span.topbar__text=text
+
+section.section.section--dark.section--p15
+	.container.topbar
+		.topbar__section
+			+topbar-item("fas fa-phone-alt", "+021-95-95-95")
+			+topbar-item("far fa-envelope", "email@email.com")
+			+topbar-item("fas fa-map-marker-alt", "1734 Stonecoal Road")
+		.topbar__section
+			+topbar-item("fas fa-dollar-sign", "USD")
+			+topbar-item("far fa-user", "My Account")

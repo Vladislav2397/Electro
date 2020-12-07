@@ -1,0 +1,38 @@
+.btn {
+	border: 1px solid #ccc;
+	background: none;
+	padding: 0.5em 2em;
+	transition: 0.3s;
+	cursor: pointer;
+
+	@include flex();
+
+	&:active {
+		padding-left: 3px;
+	}
+
+	&--rounded {
+		border-radius: 23px;
+	}
+
+	&--dark-theme {
+		background: $primary-color;
+		color: $white;
+		border: 2px solid $primary-color;
+
+		&:hover {
+			background: $white;
+			color: $primary-color;
+		}
+	}
+
+	&--light-theme {
+		background: $white;
+
+		&:hover {
+			background: $primary-color;
+			color: $white;
+			border: 1px solid $primary-color;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.action {
+	cursor: pointer;
+	margin: 0 10px;
+	font-size: 1em;
+
+	@include flex(column);
+
+	&--circle {
+		position: relative;
+		border-radius: 50%;
+		cursor: pointer;
+
+		@include flex();
+
+		&:hover::after {
+			opacity: 1;
+
+			@include position($all: -15px);
+		}
+
+		&::after {
+			content: '';
+			transition: 0.4s;
+			position: absolute;
+			background: #eee;
+			opacity: 0;
+			border-radius: 50%;
+			z-index: -1;
+
+			@include position($all: -25px);
+		}
+	}
+
+	&__icon {
+		position: relative;
+		font-size: 1.6em;
+	}
+
+	&__notification {
+		position: absolute;
+		background: $primary-color;
+		border-radius: 22px;
+		font-size: 0.5em;
+
+		@include position($top: -1.5em, $right: -1.5em);
+		@include box(2em);
+		@include flex();
+	}
+}

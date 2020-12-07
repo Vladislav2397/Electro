@@ -1,0 +1,29 @@
+.form-inline {
+	border-radius: 22px;
+	display: grid;
+	grid-template-columns: 150px 3fr 100px;
+
+	&__categories {
+		text-align: center;
+		border: none;
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	&__field {
+		border: none;
+		background: $white;
+		padding-left: 10px;
+		font-weight: 300;
+	}
+
+	&__btn {
+		border: none;
+		color: $white;
+		font-weight: 500;
+		font-size: 1em;
+		background: $primary-color;
+		padding: 0;
+		cursor: pointer;
+	}
+}

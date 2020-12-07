@@ -1,0 +1,130 @@
+extends ../index-layout
+
+block content
+
+	// Mixins
+	include blocks/mixins
+
+	// User info
+	include blocks/topbar
+
+	// Header
+	include blocks/header
+
+	// Navbar
+	include blocks/nav
+
+	// Collections
+	include blocks/collections
+
+	// New products
+	section.section.section--p30
+		.slider.container
+			.slider__header
+				span.slider__title New products
+				.slider__links
+					a.link.link--grey-theme.link--underline.link--active(href="#") Laptops
+					a.link.link--grey-theme.link--underline(href="#") Smartphones
+					a.link.link--grey-theme.link--underline(href="#") Cameras
+					a.link.link--grey-theme.link--underline(href="#") Accessories
+			.slider__body
+				.slider__carousel.carousel
+					.carousel__inner
+						+product-item('9')
+						+product-item('4')
+						+product-item('3')
+						+product-item('6')
+
+	// Hot deal
+	section.section.hot-deal
+		.hot-deal__inner
+			//- img.hot-deal__image(src="public/img/hotdeal.png", alt="image")
+
+	// Top selling
+	section.section.section--p30
+		.slider.container
+			.slider__header
+				span.slider__title Top selling
+				.slider__links
+					a.link.link--underline.link--grey-theme.link--active(href="#") Laptops
+					a.link.link--underline.link--grey-theme(href="#") Smartphones
+					a.link.link--underline.link--grey-theme(href="#") Cameras
+					a.link.link--underline.link--grey-theme(href="#") Accessories
+			.slider__body
+				.slider__carousel.carousel
+					.carousel__inner
+						+product-item('9')
+						+product-item('4')
+						+product-item('3')
+						+product-item('6')
+
+	// Top selling 3 columns
+	//- section.section.section--p30
+	//- 	.slider.container
+	//- 		+slider-column
+	//- 		+slider-column
+	//- 		+slider-column
+
+	// Mail sendler
+	section.section.section--border-primary
+		.container.mailsendler
+			i.mailsendler__brand-icon.far.fa-evenlope
+			.mailsendler__title Sign Up for the
+				strong Newsletter
+			.mailsendler__form
+				form.form-circle(action="" method="post")
+					input.form-circle__field(type="text" placeholder="Enter Your Email")
+					input.form-circle__btn(type="button" value="Subscribe")
+			.mailsendler__socials
+				i.fab.fa-facebook.mailsendler__social-link
+				i.fab.fa-facebook.mailsendler__social-link
+				i.fab.fa-facebook.mailsendler__social-link
+				i.fab.fa-facebook.mailsendler__social-link
+
+	// Activity links
+	section.section.section--darker.section--p30
+		.container.activity-links
+
+			.activity-links__title About us
+			.activity-links__description
+				| Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequatur debitis sunt nisi.
+			a.activity-links__link.link(href="#")
+				i.fas.fa-phone-alt.activity-links__icon
+				span &plus;021-95-95-95
+			a.activity-links__link.link(href="#")
+				i.far.fa-envelope.activity-links__icon
+				span email@email.com
+			a.activity-links__link.link(href="#")
+				i.fas.fa-map-marker-alt.activity-links__icon
+				span 1734 Stonecoal Road
+
+			.activity-links__title Categories
+			a.activity-links__link.link(href="#") Hot deals
+			a.activity-links__link.link(href="#") Laptops
+			a.activity-links__link.link(href="#") Smartphones
+			a.activity-links__link.link(href="#") Cameras
+			a.activity-links__link.link(href="#") Accessories
+
+			.activity-links__title Information
+			a.activity-links__link.link(href="#") About Us
+			a.activity-links__link.link(href="#") Contact Us
+			a.activity-links__link.link(href="#") Privacy Policy
+			a.activity-links__link.link(href="#") Orders and Returns
+			a.activity-links__link.link(href="#") Terms & Conditions
+
+			.activity-links__title Service
+			a.activity-links__link.link(href="#") My Account
+			a.activity-links__link.link(href="#") View Cart
+			a.activity-links__link.link(href="#") Wishlist
+			a.activity-links__link.link(href="#") Track My Order
+			a.activity-links__link.link(href="#") Help
+
+	// Footer
+	footer.section.section--dark.section--p15
+		.footer.container
+			.footer__cards
+			.footer__license
+				| Copyright ©2020 All rights reserved | This template is made with&nbsp;
+				i.far.fa-heart
+				| &nbsp;by&nbsp;
+				a.footer__link.link.link--dark-theme(href="#") Colorlib
