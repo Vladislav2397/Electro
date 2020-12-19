@@ -1,0 +1,82 @@
+extends ../index-layout
+
+block content
+	// User info
+	include blocks/topbar
+
+	// Header
+	include blocks/header
+
+	// Navbar
+	include blocks/nav
+
+	// Mail sendler
+	section.section.section--p30.section--border-primary
+		.container.mailsendler
+			i.mailsendler__brand-icon.far.fa-envelope
+			.mailsendler__title Sign Up for the 
+				strong.mailsendler__strong Newsletter
+			.mailsendler__form
+				form.form-inline(action="" method="post")
+					input.form-inline__field.form-inline__field--bordered(type="text" placeholder="Enter Your Email")
+					button.form-inline__btn.btn.btn--clicked
+						i.fas.fa-envelope &nbsp;
+						| Subscribe
+						
+			.mailsendler__socials
+				button.btn.btn--squared
+					i.fab.fa-facebook-f.mailsendler__social-link
+				button.btn.btn--squared
+					i.fab.fa-twitter.mailsendler__social-link
+				button.btn.btn--squared
+					i.fab.fa-instagram.mailsendler__social-link
+				button.btn.btn--squared
+					i.fab.fa-pinterest.mailsendler__social-link
+
+	// Activity links
+	section.section.section--darker.section--p30
+		.container.activity-links
+
+			.activity-links__title About us
+			.activity-links__description
+				| Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequatur debitis sunt nisi.
+			a.activity-links__link.link(href="#")
+				i.fas.fa-phone-alt.activity-links__icon
+				span &plus;021-95-95-95
+			a.activity-links__link.link(href="#")
+				i.far.fa-envelope.activity-links__icon
+				span email@email.com
+			a.activity-links__link.link(href="#")
+				i.fas.fa-map-marker-alt.activity-links__icon
+				span 1734 Stonecoal Road
+
+			.activity-links__title Categories
+			a.activity-links__link.link(href="#") Hot deals
+			a.activity-links__link.link(href="#") Laptops
+			a.activity-links__link.link(href="#") Smartphones
+			a.activity-links__link.link(href="#") Cameras
+			a.activity-links__link.link(href="#") Accessories
+
+			.activity-links__title Information
+			a.activity-links__link.link(href="#") About Us
+			a.activity-links__link.link(href="#") Contact Us
+			a.activity-links__link.link(href="#") Privacy Policy
+			a.activity-links__link.link(href="#") Orders and Returns
+			a.activity-links__link.link(href="#") Terms & Conditions
+
+			.activity-links__title Service
+			a.activity-links__link.link(href="#") My Account
+			a.activity-links__link.link(href="#") View Cart
+			a.activity-links__link.link(href="#") Wishlist
+			a.activity-links__link.link(href="#") Track My Order
+			a.activity-links__link.link(href="#") Help
+
+	// Footer
+	footer.section.section--dark.section--p30
+		.footer.container
+			.footer__cards
+			.footer__license
+				| Copyright ©2020 All rights reserved | This template is made with&nbsp;
+				i.far.fa-heart
+				| &nbsp;by&nbsp;
+				a.footer__link.link.link--dark-theme(href="#") Colorlib
