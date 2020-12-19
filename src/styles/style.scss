@@ -11,18 +11,22 @@
 	"layouts/section";
 
 @import
-	"common/btn",
-	"common/link",
-	"common/form-inline",
-	"common/action",
-	"common/collections",
-	"common/slider",
-	"common/product-item",
-	"common/carousel",
-	"common/draft";
+	"components/btn",
+	"components/link",
+	"components/form-inline",
+	"components/form-inline-new",
+	"components/action",
+	"components/collections",
+	"components/slider",
+	"components/product-item",
+	"components/product-item-col",
+	"components/carousel";
 
 @import
-	"components/topbar",
-	"components/header",
-	"components/nav",
-	"components/activity-links";
+	"common/topbar",
+	"common/header",
+	"common/nav",
+	"common/draft",
+	"common/activity-links",
+	"common/hot-deal",
+	"common/mailsendler.scss";

@@ -1,0 +1,38 @@
+.mailsendler {
+	text-align: center;
+	font-size: 1rem;
+	width: 500px;
+	position: relative;
+
+	&__brand-icon {
+		position: absolute;
+		left: -100px;
+		font-size: 20rem;
+		z-index: -1;
+		transform: rotate(15deg);
+		color: #eee;
+	}
+
+	&__title {
+		font-size: 2.4em;
+		margin-bottom: 30px;
+	}
+
+	&__strong {
+		text-transform: uppercase;
+	}
+
+	&__form {
+		width: 100%;
+		font-size: 1.5em;
+		margin: 30px 0;
+	}
+
+	&__socials {
+		font-size: 2em;
+		display: grid;
+		grid-template-columns: repeat(4, auto);
+		justify-content: center;
+		grid-gap: 10px;
+	}
+}

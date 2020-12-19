@@ -4,17 +4,29 @@
 	padding: 0.5em 2em;
 	transition: 0.3s;
 	cursor: pointer;
+	text-align: center;
 
-	@include flex();
-
-	&:active {
-		padding-left: 3px;
+	&:hover {
+		.btn__icon {
+			width: 30px;
+		}
 	}
 
 	&--rounded {
 		border-radius: 23px;
 	}
 
+	&--clicked:active {
+		padding-right: 1.9em;
+		padding-left: 2.1em;
+	}
+
+	&--squared {
+		padding: 0;
+		width: 40px;
+		height: 40px;
+	}
+	
 	&--dark-theme {
 		background: $primary-color;
 		color: $white;
@@ -34,5 +46,13 @@
 			color: $white;
 			border: 1px solid $primary-color;
 		}
+	}
+
+	&__icon {
+		color: $primary-color;
+		width: 0;
+		transition: 0.3s;
+		overflow: hidden;
+		text-align: left;
 	}
 }

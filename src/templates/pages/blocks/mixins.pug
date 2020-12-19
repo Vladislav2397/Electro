@@ -32,27 +32,33 @@ mixin product-item(numImage)
 				snap.product-item__text Add to cart
 
 mixin product-item-column
-	.product-item.product-item--column
-		.product-item__pane.product-item__pane--column
-			img.product-item__image(src="public/img/product05.png", alt="image")
-		.product-item__information
-			.product-item__category Category
-			a.product-item__title(href="#") Title product
-			.product-item__price
-				.product-item__current-price $800.00
-				.product-item__old-price $900.99
+	.product-item-col
+		.product-item-col__pane
+			img.product-item-col__image(src="public/img/product05.png", alt="image", width="300", height="200")
+		.product-item-col__information
+			.product-item-col__category Category
+			a.product-item-col__title(href="#") Title product
+			.product-item-col__price
+				.product-item-col__current-price $800.00
+				.product-item-col__old-price $900.99
 
-mixin slider
-	.slider
-		.slider__header
-			span.slider__title
-			.slider__links
-		.slider__body
-			.slider__carousel.carousel
-				+product-item-column
-				+product-item-column
-				+product-item-column
-				+product-item-column
+mixin slider(title)
+	section.section.section--p30
+		.slider.container
+			.slider__header
+				span.slider__title=title
+				.slider__links
+					a.link.link--underline.link--grey-theme.link--active(href="#") Laptops
+					a.link.link--underline.link--grey-theme(href="#") Smartphones
+					a.link.link--underline.link--grey-theme(href="#") Cameras
+					a.link.link--underline.link--grey-theme(href="#") Accessories
+			.slider__body
+				.slider__carousel.carousel
+					.carousel__inner
+						+product-item('9')
+						+product-item('4')
+						+product-item('3')
+						+product-item('7')
 
 mixin slider-column
 	.slider

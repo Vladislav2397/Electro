@@ -4,6 +4,7 @@
 	position: relative;
 	top: 2px;
 	transition: 0.2s;
+	font-size: 1rem;
 
 	&:hover {
 		box-shadow: 0 0 0 1px $primary-color;
@@ -17,6 +18,8 @@
 	&--column {
 		display: flex;
 		border: none;
+		min-width: 300px;
+
 
 		&:hover {
 			box-shadow: none;
@@ -24,13 +27,11 @@
 	}
 
 	&__pane {
-		width: 100%;
-		height: 263px;
-
 		@include flex();
+		@include box(100%, 260px);
 
 		&--column {
-			@include box(120px, 100px)
+			@include box(60px);
 		}
 	}
 
@@ -67,30 +68,36 @@
 	&__category {
 		text-transform: uppercase;
 		color: #aaa;
-		font-size: 12px;
+		font-size: 1.2em;
 		margin: 10px 0;
 	}
 
 	&__title {
 		text-transform: uppercase;
 		font-weight: 700;
-		font-size: 14px;
-		margin: 10px 0;
+		font-size: 1.4em;
+		transition: 0.3s;
+
+		&:hover {
+			color: $primary-color;
+		}
 	}
 
 	&__price {
 		@include flex();
+		margin-top: 1rem;
+		font-size: 1rem;
 	}
 
 	&__current-price {
 		color: $primary-color;
 		font-weight: 800;
-		font-size: 20px;
+		font-size: 2em;
 		margin: 0 5px;
 	}
 
 	&__old-price {
-		font-size: 12px;
+		font-size: 1.1em;
 		color: #aaa;
 		text-decoration: line-through;
 	}
@@ -147,6 +154,7 @@
 	&__btn {
 		font-weight: 600;
 		text-transform: uppercase;
+		font-size: 1.6em;
 
 		&:hover .product-item__btn-icon {
 			width: 30px;

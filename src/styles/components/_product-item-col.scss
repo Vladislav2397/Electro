@@ -1,0 +1,44 @@
+.product-item-col {
+	@include flex($main-axis: flex-start);
+	font-size: 1rem;
+
+	&__pane {
+		@include box(60px, 100%);
+		@include flex;
+	}
+
+	&__image {
+		@include box(100%);
+	}
+
+	&__information {
+		@include flex(column, space-between, flex-start);
+	}
+
+	&__category {
+		@extend .product-item__category;
+		font-size: 0.9em;
+	}
+
+	&__title {
+		@extend .product-item__title;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		@extend .product-item__price;
+		margin-top: 0;
+		font-size: 1rem;
+	}
+
+	&__current-price {
+		@extend .product-item__current-price;
+		font-size: 1.6em;
+	}
+
+	&__old-price {
+		@extend .product-item__old-price;
+		font-size: 1em;
+	}
+}

@@ -1,3 +1,56 @@
 .hot-deal {
-	font-size: 24px;
+	background-image: url("../img/hotdeal.png");
+	background-position: 50% 50%;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	padding: 60px 0;
+}
+
+.time-counter {
+	height: 300px;
+	text-align: center;
+
+	@include flex(column, space-between);
+
+	&__time {
+		@include flex();
+		margin-bottom: 30px;
+	}
+
+	&__section {
+		margin: 0 7px;
+		background: $primary-color;
+		border-radius: 50%;
+		color: $white;
+
+		@include flex(column);
+		@include box(100px);
+	}
+
+	&__digit {
+		font-weight: 700;
+		font-size: 24px;
+	}
+
+	&__descrption {
+		font-size: 10px;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		font-size: 2em;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		font-size: 1.5em;
+		text-transform: uppercase;
+	}
+
+	&__btn {
+		margin-top: 30px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
 }

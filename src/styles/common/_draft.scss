@@ -1,18 +1,53 @@
 .draft {
-	@include flex();
+	@include flex(column);
 
-	&__btn:hover {
-		.draft__icon {
-			width: 30px;
-			transition: 0.3s;
+	&__header {
+		text-transform: uppercase;
+	}
+
+	&__section {
+		@include flex(column);
+	}
+
+	&__title {
+		margin: 20px 0;
+	}
+
+	&__body {
+		@include flex($main-axis: space-between);
+		width: 100%;
+	}
+
+	&__element {
+		text-align: center;
+		padding: 20px;
+
+		h5 {
+			margin-bottom: 15px;
+		}
+
+		&--light {
+			background: #fff;
+
+			h5 {
+				color: #000;
+			}
+		}
+
+		&--dark {
+			background: #000;
+
+			h5 {
+				color: #fff;
+			}
 		}
 	}
 
-	&__icon {
-		color: $primary-color;
-		width: 0;
-		transition: 0.3s;
-		overflow: hidden;
-		text-align: left;
+	&--center {
+		@include flex;
+	}
+
+	&--background-grey {
+		background: #999;
 	}
 }

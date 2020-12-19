@@ -1,44 +1,98 @@
 extends ../index-layout
 
 block content
-	h1 Draft
-	section.section.section--p15.section--dark
-		button.btn.btn--rounded
-			span Button
-		br
-		button.btn.btn--rounded.btn--light-theme
-			span Button
-		br
-		button.btn.btn--rounded.btn--dark-theme
-			span Button
-		br
-		.draft
-			button.btn.btn--rounded.btn--dark-theme.draft__btn
-				i.fas.fa-shopping-cart.draft__icon
-				span.draft__text Button
+	.draft
+		h1.draft__header Draft
+		.draft--background-grey.section.section--p30
+			.draft__section.container
+				h3.draft__title Buttons
+				.draft__body
+					.draft__element
+						h5 Default
+						button.btn
+							span Button
+					.draft__element
+						h5 Rounded
+						button.btn.btn--rounded
+							span Button
+					.draft__element
+						h5 Light theme 
+						button.btn.btn--rounded.btn--light-theme
+							span Button
+					.draft__element
+						h5 Dark theme 
+						button.btn.btn--rounded.btn--clicked.btn--dark-theme
+							span Button
+				.draft__body.draft--center
+					.draft__element
+						h5 With icon
+						button.btn.btn--rounded.btn--dark-theme
+							i.fas.fa-shopping-cart.btn__icon
+							span.draft__text Button
+				.draft__body.draft--center
+					.draft__element
+						h5 Clicked
+						button.btn.btn--rounded.btn--dark-theme.btn--clicked
+							span Button
 
-	br
+		.draft--background-grey.section.section--p30
+			.draft__section.container
+				h3.draft__title Links
+				.draft__body
+					.draft__element
+						h5 Default
+						a.link(href="#") Link
+					.draft__element
+						h5 Active
+						a.link.link--active(href="#") Link
+					.draft__element
+						h5 Active underline
+						a.link.link--active.link--underline(href="#") Link
+					.draft__element
+						h5 Underline
+						a.link.link--underline(href="#") Link
+					.draft__element.draft__element--dark
+						h5 Grey theme
+						a.link.link--grey-theme(href="#") Link
+					.draft__element.draft__element--dark
+						h5 Grey theme underline
+						a.link.link--grey-theme.link--underline(href="#") Link
 
-	section.section.section--p30.section--dark
-		a.link(href="#") Default link
-		a.link.link--active(href="#") Active link
-		a.link.link--active.link--underline(href="#")
-			| Active underline link
-		a.link.link--underline(href="#") Underline link
-		a.link.link--grey-theme(href="#") Grey theme link
-		a.link.link--grey-theme.link--underline(href="#")
-			| Grey theme underline link
+		.draft--background-grey.section.section--p30
+			.draft__section.container
+				h3.draft__title Actions
+				.draft__body
+					.draft__element.draft__element--light
+						h5 Default
+						.action.action--circle
+							i.far.fa-star.action__icon
+					.draft__element
+						h5 With title
+						.action
+							i.far.fa-star.action__icon
+							span.action__text Wishlist
+					.draft__element
+						h5 With title and notification
+						.action
+							i.far.fa-star.action__icon
+								span.action__notification 3
+							span.action__text Wishlist
 
-	br
-
-	section.section.section--p30
-		.draft
-			.action.action--circle
-				i.far.fa-star.action__icon
-			.action
-				i.far.fa-star.action__icon
-				span.action__text Wishlist
-			.action
-				i.far.fa-star.action__icon
-					span.action__notification 3
-				span.action__text Wishlist
+		.draft--background-grey.section.section--p30
+			.draft__section.container
+				h3.draft__title Actions
+				.draft__body
+					.draft__element
+						h5 Categories, field and button
+						form.form-inline-new(action="" method="get")
+							select.form-inline-new__categories
+								option All Categories
+								option Category 1
+								option Category 2
+							input.form-inline-new__field(type="text" placeholder="Search here")
+							input.form-inline-new__btn.btn.btn--clicked(type="button" value="Search")
+					.draft__element
+						h5 Field and button
+						form.form-inline-new(action="" method="get")
+							input.form-inline-new__field(type="text" placeholder="Search here")
+							input.form-inline-new__btn.btn.btn--clicked(type="button" value="Search")

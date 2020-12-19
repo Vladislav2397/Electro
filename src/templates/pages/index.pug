@@ -18,68 +18,67 @@ block content
 	include blocks/collections
 
 	// New products
-	section.section.section--p30
-		.slider.container
-			.slider__header
-				span.slider__title New products
-				.slider__links
-					a.link.link--grey-theme.link--underline.link--active(href="#") Laptops
-					a.link.link--grey-theme.link--underline(href="#") Smartphones
-					a.link.link--grey-theme.link--underline(href="#") Cameras
-					a.link.link--grey-theme.link--underline(href="#") Accessories
-			.slider__body
-				.slider__carousel.carousel
-					.carousel__inner
-						+product-item('9')
-						+product-item('4')
-						+product-item('3')
-						+product-item('6')
+	+slider("New products")
 
 	// Hot deal
-	section.section.hot-deal
-		.hot-deal__inner
-			//- img.hot-deal__image(src="public/img/hotdeal.png", alt="image")
+	include blocks/hot-deal
 
 	// Top selling
-	section.section.section--p30
-		.slider.container
-			.slider__header
-				span.slider__title Top selling
-				.slider__links
-					a.link.link--underline.link--grey-theme.link--active(href="#") Laptops
-					a.link.link--underline.link--grey-theme(href="#") Smartphones
-					a.link.link--underline.link--grey-theme(href="#") Cameras
-					a.link.link--underline.link--grey-theme(href="#") Accessories
-			.slider__body
-				.slider__carousel.carousel
-					.carousel__inner
-						+product-item('9')
-						+product-item('4')
-						+product-item('3')
-						+product-item('6')
+	+slider("Top selling")
 
 	// Top selling 3 columns
-	//- section.section.section--p30
-	//- 	.slider.container
-	//- 		+slider-column
-	//- 		+slider-column
-	//- 		+slider-column
+	section.section.section--p30.section--border-grey
+		.container.section--inline
+
+			.slider.slider--column
+				.slider__header
+					span.slider__title Top selling
+				.slider__body
+					.slider__carousel.carousel.carouser--column
+						+product-item-column
+						+product-item-column
+						+product-item-column
+
+			.slider.slider--column
+				.slider__header
+					span.slider__title Top selling
+				.slider__body
+					.slider__carousel.carousel.carouser--column
+						+product-item-column
+						+product-item-column
+						+product-item-column
+
+			.slider.slider--column
+				.slider__header
+					span.slider__title Top selling
+				.slider__body
+					.slider__carousel.carousel.carouser--column
+						+product-item-column
+						+product-item-column
+						+product-item-column
 
 	// Mail sendler
-	section.section.section--border-primary
+	section.section.section--p30.section--border-primary
 		.container.mailsendler
-			i.mailsendler__brand-icon.far.fa-evenlope
-			.mailsendler__title Sign Up for the
-				strong Newsletter
+			i.mailsendler__brand-icon.far.fa-envelope
+			.mailsendler__title Sign Up for the 
+				strong.mailsendler__strong Newsletter
 			.mailsendler__form
-				form.form-circle(action="" method="post")
-					input.form-circle__field(type="text" placeholder="Enter Your Email")
-					input.form-circle__btn(type="button" value="Subscribe")
+				form.form-inline(action="" method="post")
+					input.form-inline__field.form-inline__field--bordered(type="text" placeholder="Enter Your Email")
+					button.form-inline__btn.btn.btn--clicked
+						i.fas.fa-envelope &nbsp;
+						| Subscribe
+						
 			.mailsendler__socials
-				i.fab.fa-facebook.mailsendler__social-link
-				i.fab.fa-facebook.mailsendler__social-link
-				i.fab.fa-facebook.mailsendler__social-link
-				i.fab.fa-facebook.mailsendler__social-link
+				button.btn.btn--squared
+					i.fab.fa-facebook-f.mailsendler__social-link
+				button.btn.btn--squared
+					i.fab.fa-twitter.mailsendler__social-link
+				button.btn.btn--squared
+					i.fab.fa-instagram.mailsendler__social-link
+				button.btn.btn--squared
+					i.fab.fa-pinterest.mailsendler__social-link
 
 	// Activity links
 	section.section.section--darker.section--p30
@@ -120,7 +119,7 @@ block content
 			a.activity-links__link.link(href="#") Help
 
 	// Footer
-	footer.section.section--dark.section--p15
+	footer.section.section--dark.section--p30
 		.footer.container
 			.footer__cards
 			.footer__license

@@ -1,0 +1,35 @@
+.form-inline {
+	border-radius: 22px;
+	overflow: hidden;
+	width: 500px;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	
+	&__categories {
+		flex-shrink: 0;
+		border: none;
+	}
+
+	&__field {
+		flex: 1 1;
+		min-width: 150px;
+		border: none;
+		padding: 0 10px;
+
+		&--bordered {
+			border: 1px solid #ccc;
+			border-radius: 23px 0 0 23px;
+		}
+	}
+
+	&__btn {
+		flex-shrink: 0;
+		border: none;
+		color: $white;
+		font-weight: 500;
+		font-size: 1em;
+		background: $primary-color;
+		cursor: pointer;
+	}
+}
